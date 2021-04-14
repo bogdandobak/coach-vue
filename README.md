@@ -3,7 +3,7 @@
 
 You can check this app here:
 
-* [DEMO](https://vibrant-banach-3e99ca.netlify.app/coaches)
+* [DEMO](https://vibrant-banach-3e99ca.netlify.app/)
 
 ## Description
 
