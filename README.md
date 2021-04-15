@@ -3,7 +3,7 @@
 
 You can check this app here:
 
-* [DEMO]
+* [DEMO](https://coach-vue-app.netlify.app/)
 
 ## Description
 
