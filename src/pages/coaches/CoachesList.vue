@@ -3,8 +3,12 @@
     <base-card>
      <coach-filter @change-filter="setFilters"></coach-filter>
     <div class="flex flex-col sm:flex-row items-center justify-around my-4 gap-5 w-2/3 m-auto">
-      <base-button @click="loadCoaches">Refresh</base-button>
-      <base-button link to="/register">Register</base-button>
+      <base-button @click="loadCoaches">
+        Refresh
+      </base-button>
+      <base-button link to="/register" v-if="isVisibleButton">
+        Register
+      </base-button>
     </div>
     <div class="m-5" v-if="isLoading">
       <orbit-spinner
@@ -57,7 +61,7 @@ export default {
     },
     isVisibleButton() {
       return this.isAuthorized && !this.isCoach && !this.isLoading;
-    }
+    },
   },
   methods: {
     setFilters(filterValue) {
@@ -69,7 +73,7 @@ export default {
       await this.$store.dispatch('coaches/loadCoaches');
       
       this.isLoading = false;
-    }
+    },
   },
   created() {
     this.loadCoaches();

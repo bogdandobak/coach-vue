@@ -4,14 +4,18 @@ const SIGNUP_URL = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?ke
 const SIGNIN_URL = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBiBe34SKQTzf-N60TFfbtPydkSE1L4zbY';
 
 export const setSignIn = async (user, mode) => {
-  const url = mode === 'login' ? SIGNIN_URL : SIGNUP_URL
+  const url = mode === 'login' ? SIGNIN_URL : SIGNUP_URL;
   const response = await axios.post(url, user);
   
   try {
+    if (response.status !== 200) {
+      throw new Error(`${response.status} - ${response.statusText}`);
+    }
+
     const result = await response.data;
 
-    return result
+    return result;
   } catch (error) {
-    throw new Error(error)
+    throw new Error(error);
   }
 };

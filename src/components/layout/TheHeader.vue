@@ -11,7 +11,7 @@
                 alt="Workflow"
               >
             </div>
-            <div class="ml-10 flex items-baseline space-x-8" >
+            <div class="ml-3 sm:ml-10 flex items-baseline space-x-2 sm:space-x-8" >
               <router-link
                 to="/coaches"
                 class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
@@ -35,6 +35,7 @@
               <base-button 
                 v-if="isAuthorized"
                 @click="logout"
+                class="w-1/3"
               >
                 Logout
               </base-button>
@@ -56,6 +57,7 @@ export default {
   methods: {
     logout() {
       this.$store.dispatch('logout');
+      this.$router.replace('/');
     }
   }
 }

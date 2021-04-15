@@ -14,7 +14,7 @@ export default {
     },
     setCoaches(state, payload) {
       state.coaches = payload;
-    }
+    },
   },
   actions: {
     addCoach(context, payload) {
@@ -45,7 +45,7 @@ export default {
       }
 
       context.commit('setCoaches', coaches)
-    }
+    },
   },
   getters: {
     coaches(state) {

@@ -1,7 +1,7 @@
 <template>
   <li>
     <div class="flex justify-center items-center mb-5 mx-10">
-      <div class="w-full sm:w-96 bg-gray-800 border-2 border-purple-400 p-6 rounded-md tracking-wide shadow-lg">
+      <div class="w-full sm:w-screen max-w-xl bg-gray-800 border-2 border-purple-400 p-6 rounded-md tracking-wide shadow-lg">
           <div id="header" class="flex items-center mb-4"> 
             <div class="leading-6 ml-6">
                 <h2 class="text-xl font-semibold text-white">

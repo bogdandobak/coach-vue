@@ -5,11 +5,8 @@
           <h2>{{ fullName }}</h2>
           <h3>${{ rate }}/hour</h3>
         </div>
-        <base-button link :to="contactLink">
-          Contact
-        </base-button>
         <router-view></router-view>
-        <div class="flex gap-5 sm:gap-10 w-2/4 justify-center">
+        <div class="flex gap-1 sm:gap-5 sm:gap-10 w-2/4 justify-center">
           <base-badge
             v-for="area in areas"
             :key="area"
@@ -18,9 +15,12 @@
           >
           </base-badge>
         </div>
-        <p class="font-medium pt-5 text-purple-600">
+        <p class="font-medium p-5 text-purple-600">
           {{ description }}
         </p>
+        <base-button link :to="contactLink">
+          Contact
+        </base-button>
       </base-card>
     </section>
 </template>
@@ -60,6 +60,6 @@ export default {
     rate() {
       return this.selectedCoach.hourlyRate;
     }
-  }
+  },
 }
 </script>

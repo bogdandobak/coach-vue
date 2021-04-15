@@ -1,5 +1,5 @@
 <template>
-  <li class="flex flex-col items-center justify-center py-10 px-24 sm:px-32 m-2 shadow rounded-md">
+  <li class="flex flex-col items-center justify-center py-10 px-24 sm:px-32 m-5 w-3/4 shadow rounded-md">
     <div >
       <a :href="link" class="text-purple-600 text-md hover:text-purple-300">{{ email }}</a>
       <p class="text-purple-400 text-lg font-medium p-2">{{ text }}</p>

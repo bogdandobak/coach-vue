@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 import CoachesList from './pages/coaches/CoachesList.vue';
 import { store } from './store/index';
@@ -11,7 +11,7 @@ const ContactCoach = () => import('./pages/requests/ContactCoach.vue');
 const UserAuth = () => import('./pages/auth/UserAuth.vue');
 
 export const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     { path: '/', redirect: '/coaches' },
     { path: '/coaches', component: CoachesList },

@@ -13,7 +13,7 @@
           color="#9370DB"
         />
       </div>
-      <ul v-else-if="hasRequests" class="flex flex-col items-center gap-5">
+      <ul v-else-if="hasRequests" class="flex flex-col items-center gap-5 w-full">
         <request-item
           v-for="request in requests"
           :key="request.id"
