@@ -1,6 +1,10 @@
 <template>
   <the-header></the-header>
-  <router-view>
+  <router-view v-slot="slotPors">
+    <transition name="pages">
+      <component :is="slotPors.Component">
+      </component>
+    </transition>
   </router-view>
 </template>
 
@@ -28,3 +32,31 @@ export default {
   },
 }
 </script>
+
+<style>
+.pages-enter-active {
+  animation: pages 0.3s ease-in;
+}
+
+.pages-enter-active {
+  animation: pages 0.3s ease-out;
+}
+
+@keyframes pages {
+  0% {
+    opacity: 0
+  } 
+
+  50% {
+    opacity: 0.5
+  }
+
+  75% {
+    opacity: 0.7
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+</style>

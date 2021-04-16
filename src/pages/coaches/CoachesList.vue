@@ -1,7 +1,7 @@
 <template>
   <section class="mx-5 sm:mx-14">
     <base-card>
-     <coach-filter @change-filter="setFilters"></coach-filter>
+    <coach-filter @change-filter="setFilters"></coach-filter>
     <div class="flex flex-col sm:flex-row items-center justify-around my-4 gap-5 w-2/3 m-auto">
       <base-button @click="loadCoaches">
         Refresh
